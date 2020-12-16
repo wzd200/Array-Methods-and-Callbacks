@@ -1,7 +1,7 @@
 import { fifaData } from './fifa.js';
 
 // ⚽️ M  V P ⚽️ //
-//test
+//test test
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Investigate the data above. Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
@@ -66,8 +66,8 @@ console.log(taskOne)
 Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 function getFinals(data) {
-  data.filter(item.Stage==='Final')
-  
+  let finalsGotted=data.filter(item.Stage==='Final')
+  return finalsGotted;
 
 
 
