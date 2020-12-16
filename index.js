@@ -14,7 +14,7 @@ let taskOne=fifaData.filter(item => {
     return item.Stage==="Final"
 })
 
-console.log(taskOne)
+//console.log(taskOne)
 
 
 // const final2014 = fifaData.filter((match) => {
@@ -66,14 +66,17 @@ console.log(taskOne)
 Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 function getFinals(data) {
-  let finalsGotted=data.filter(item.Stage==='Final')
-  return finalsGotted;
+   return data.filter(item => {
+     return item.Stage==="Final"
+   })
+}
 
 
 
 
 
-//   first attempt lol
+
+//   first attempt post-flex lol
 //   let finalArray=[];
   
 //   for (let i=0;i<data.length;i++){
@@ -87,10 +90,10 @@ function getFinals(data) {
 //     }
 //   }
   
-}
 
 
-    // attempt 1 lol
+
+    // attempt 1 pre-flex lol
     // arrayTask2.filter((match) => {
     //     return match.year === 2014 && match.stage === "Final" //yikess
 
@@ -99,9 +102,22 @@ function getFinals(data) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(data, cb) {
+    let years=data.map(cb => cb.Year);
+    return years;
+
+    //attempt two lol
+    //return data.map(cb(item.Years));
+
+    //attempt one lol
+    //return cb(data).Years.map
 }
+
+//getFinals will pump out an array of objects with Finals in their stage (cb)
+//how do I go into each object and pull out the year? I have .forEach and .map and .filter.
+//I could filter my keys till I just get years
+//I could see if .map can push just years into new array
+//I could write a for loop and use .push (sounds like an old answer)
 
 
 
